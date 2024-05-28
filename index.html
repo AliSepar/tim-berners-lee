@@ -16,14 +16,16 @@
   <body>
     <header>
       <nav>
-        <main>
-          <a href="#" class="logo">
-            <img
-              src="https://cdn.britannica.com/mendel/eb-logo/MendelNewThistleLogo.png"
-              alt="Page logo"
-            />
-          </a>
-
+        <a href="#" class="logo">
+          <img
+            src="https://cdn.britannica.com/mendel/eb-logo/MendelNewThistleLogo.png"
+            alt="Page logo"
+          />
+        </a>
+        <span class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+        <main class="navbar_list">
           <ul>
             <li>
               <a href="#"><i class="fa-solid fa-bars"></i> Browse </a>
@@ -37,12 +39,13 @@
             <li><a href="#">Quizzes</a></li>
             <li><a href="#">Money</a></li>
           </ul>
+
+          <!-- right side buttons -->
+          <aside>
+            <a href="#" class="sub-btn">Subscribe</a>
+            <a href="#">Login <i class="fa-solid fa-angle-down"></i></a>
+          </aside>
         </main>
-        <!-- right side buttons -->
-        <aside>
-          <a href="#" class="sub-btn">Subscribe</a>
-          <a href="#">Login <i class="fa-solid fa-angle-down"></i></a>
-        </aside>
       </nav>
       <p>
         <a href="#"> Home</a> > <a href="#">Science</a> >
@@ -57,8 +60,8 @@
         <h2>British scientist</h2>
 
         <ul>
-          <li>
-            <a href="#"><i class="fa-solid fa-print"></i> Print</a>
+          <li class="heading_btn">
+            <a href="#"><i class="fa-solid fa-print heading_btn"></i> Print</a>
           </li>
           <li>
             <a href="#"><i class="fa-solid fa-certificate"></i> Cite</a>
@@ -147,5 +150,14 @@
         </article>
       </section>
     </main>
+
+    <script>
+      let toggle_btn = document.querySelector(".toggle_btn");
+      let navList = document.querySelector(".navbar_list");
+
+      toggle_btn.addEventListener("click", () => {
+        navList.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
